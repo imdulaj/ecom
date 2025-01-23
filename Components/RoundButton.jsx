@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-export default function RoundButton({label , border = false}) {
+export default function RoundButton({onPress,label , border = false}) {
   return (
-   <TouchableOpacity>
-     <View style={[
+   <TouchableOpacity onPress={onPress} >
+     <View  style={[
         styles.btn,
         border && { backgroundColor: 'white', borderWidth: 1 },
       ]}>

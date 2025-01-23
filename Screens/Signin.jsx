@@ -3,7 +3,12 @@ import { View, Text, StyleSheet, Image, StatusBar } from 'react-native';
 import RoundButton from '../Components/RoundButton';
 import FullRoundButton from '../Components/FullRoundButton';
 
-export default function Signin() {
+export default function Signin({navigation}) {
+
+    const gosignin = () => {
+        navigation.navigate('Signup');
+      };
+
   return (
     <View style={styles.container}>
         <StatusBar backgroundColor={'#ffffff'} />
@@ -16,7 +21,7 @@ export default function Signin() {
             <Text style={styles.txt2}>Welcome to DeeMart </Text>
             <View style={styles.btnarea}>
                 <RoundButton label={'Sign In'} />
-                <RoundButton border={true} label={'Sign Up'} />
+                <RoundButton onPress={gosignin} border={true} label={'Sign Up'} />
                 
             </View>
 

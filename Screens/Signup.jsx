@@ -4,6 +4,8 @@ import InputField from '../Components/InputField';
 import RoundButton from '../Components/RoundButton';
 
 export default function Signup() {
+
+
   return (
     <View style={styles.container}>
         <StatusBar backgroundColor={'#ffffff'} />
@@ -12,7 +14,7 @@ export default function Signup() {
       <View style={styles.inputs}>
         <InputField placeholder={'email'} keyboardType={'email-address'} />
         <InputField placeholder={'password'} secureTextEntry={true} />
-        <RoundButton label={'SignUp'} />
+        <RoundButton  label={'SignUp'} />
       </View>
      </View>
   );

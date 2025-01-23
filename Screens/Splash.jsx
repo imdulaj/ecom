@@ -3,11 +3,13 @@ import { View, Text, StyleSheet ,ImageBackground} from 'react-native';
 
 
 
-export default function Splash() {
+export default function Splash({navigation}) {
 
-    // setTimeout(() => {
-    //     navigation.navigate('Signin');
-    // },2000);
+    React.useEffect(() => {
+        setTimeout(() => {
+          navigation.navigate('Signin');
+        }, 4000);
+      }, [navigation]);
 
 
   return (
